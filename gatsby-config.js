@@ -1,8 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Alexander Hörl`,
+    description: `Fullstack web and software developer with experinces in NodeJS, React, GO and DevOps.`,
+    author: `@alexanderhorl`,
+    social: [
+      {
+        site: 'twitter',
+        url: 'https://twitter.com/alexanderhorl',
+      },
+      {
+        site: 'github',
+        url: 'https://github.com/AlexanderProd',
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +34,15 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-134421805-3",
+        anonymize: true,
+        respectDNT: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
