@@ -1,29 +1,62 @@
 import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 
-import { colors } from '../../ui/styles'
+import { breakpoints } from '~/utils/styles'
 
 export const Wrapper = styled.div`
-  margin-top: 3rem;
-`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  animation: fadeup 1s ease-in-out;
 
-export const SocialLinks = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  
-  li {
-    padding-top: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
 
-    :first-child {
-      padding-top: 0px;
+  @keyframes fadeup {
+    from { 
+      opacity: 0;
+      transform: translateY(50px)
+    }
+    to { 
+      opacity: 1; 
+      position: 0px;
+      transform: translateY(0px)
     }
   }
 `
 
-export const Link = styled.a`
-  color: ${({ color }) => color ? color : colors.blue};
+export const Links = styled.div`
+  & * {
+    margin-right: 1rem;
+  }
 
-  :visited {
-    color: ${({ color }) => color ? color : colors.blue};
+  &:last-item {
+    margin-right: 0;
+  }
+
+  @media (max-width: ${breakpoints.s}px){
+   display: none;
+  }
+`
+
+export const FooterItem = styled(Link)`
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+`
+
+export const OutgoingLink = styled.a`
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
   }
 `

@@ -1,26 +1,33 @@
 import React from 'react'
 
+import useSiteMetadata from '~/hooks/useSiteMetadata'
 import {
   Wrapper,
-  SocialLinks, 
-  Link
+  Links,
+  FooterItem, 
+  OutgoingLink
 } from './styles'
 
-const Footer = ({ social }) => {
-  const links = social.map(elem => (
-    <li key={elem.site}>
-      <Link href={elem.url} target="_blank" color={elem.color}>
-        {elem.site}
-      </Link>
-    </li>
-  ))
+const Footer = () => {
+  const { footer, social } = useSiteMetadata()
 
   return (
     <Wrapper>
-      <p>Follow Me:</p>
-      <SocialLinks>
-        {links}
-      </SocialLinks>
+      <Links>
+        {footer.map(({name, link}) => (
+          <FooterItem to={link} key={name}>
+            {name}
+          </FooterItem>
+        ))}
+        {social.map(({name, url}) => (
+          <OutgoingLink href={url} target="_blank" rel="noopener noreferrer" key={name}>
+            {name}
+          </OutgoingLink>
+        ))}
+      </Links>
+      <p>
+        This page is contiously deployed with <a href="/">JAM-Stack in a Box</a>.
+      </p>
     </Wrapper>
   )
 }
