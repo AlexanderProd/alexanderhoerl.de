@@ -1,33 +1,47 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
-import Footer from '../components/Footer'
-import { Wrapper, GlobalStyles } from '../ui/styles'
+import Footer from '~/components/Footer'
+import Navigation from '~/components/Navigation'
+import { LayoutProvider } from '~/context/LayoutContext'
+import {
+  breakpoints,
+  Wrapper,
+  GlobalStyles 
+} from '~/utils/styles'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          social {
-            site
-            url
-          }
-        }
-      }
+const Main = styled.main`
+  padding 0 2rem;
+  animation: fadein 2s ease;
+  width: 60%
+
+  @media (max-width: ${breakpoints.s}px){
+    width: 100%;
+  }
+
+  @media (min-width: ${breakpoints.l}px){
+    width: 40%;
+  }
+
+  @keyframes fadein {
+    from { 
+      opacity: 0;
     }
-  `)
+    to   { 
+      opacity: 1;
+    }
+  }
+`
 
-  return (
-    <>
-      <GlobalStyles />
-      <Wrapper>
-        <main>{children}</main>
-        <Footer social={data.site.siteMetadata.social}/>
-      </Wrapper>
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <LayoutProvider>
+    <GlobalStyles />
+    <Wrapper>
+      <Navigation />
+      <Main>{children}</Main>
+      <Footer />
+    </Wrapper>
+  </LayoutProvider>
+)
 
 export default Layout
