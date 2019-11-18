@@ -1,30 +1,36 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
-    title: `Alexander Hörl`,
+    title: `Alexander Hörl | Fullstack Software Developer`,
     description: `Fullstack web and software developer with experinces in NodeJS, React, GO and DevOps.`,
     author: `@alexanderhorl`,
+    nav: [
+      {
+        name: 'Contact',
+        link: '/contact'
+      },
+    ],
+    footer: [
+      {
+        name: 'Imprint',
+        link: '/imprint'
+      },
+    ],
     social: [
       {
-        site: 'twitter',
+        name: 'Twitter',
         url: 'https://twitter.com/alexanderhorl',
       },
       {
-        site: 'github',
+        name: 'GitHub',
         url: 'https://github.com/AlexanderProd',
       },
     ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -34,7 +40,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        //icon: `src/images/gatsby-icon.png`,
       },
     },
     {
@@ -43,6 +49,12 @@ module.exports = {
         trackingId: "UA-134421805-3",
         anonymize: true,
         respectDNT: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        '~': path.join(__dirname, 'src/'),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
