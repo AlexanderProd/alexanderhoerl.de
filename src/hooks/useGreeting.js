@@ -51,9 +51,9 @@ const useGreeting = () => {
   useEffect(() => {
     const lang = navigator.language || window.navigator.language
 
-    Object.keys(dict).map(elem => {
+    Object.keys(dict).forEach(elem => {
       if (lang.includes(elem)) {
-        setGreeting(dict[elem])
+      return setGreeting(dict[elem])
       }
     })
   }, [])
