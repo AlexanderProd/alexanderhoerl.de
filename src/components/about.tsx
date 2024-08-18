@@ -19,8 +19,8 @@ const About = () => (
             <AboutMDX />
           </Box>
           <StaticImage
-            src="../assets/me.png"
-            alt="About me"
+            src="../assets/alexanderhoerl.png"
+            alt="Alexander Hörl"
             placeholder="blurred"
             layout="fullWidth"
           />
