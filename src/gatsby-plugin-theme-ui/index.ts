@@ -12,7 +12,7 @@ const fontSizeFactor = 8;
 
 const theme = merge(tailwind, {
   config: {
-    initialColorModeName: `dark`,
+    initialColorModeName: `light`,
   },
   colors: {
     primary: tailwind.colors.blue[6],
@@ -55,6 +55,7 @@ const theme = merge(tailwind, {
       textRendering: `optimizeLegibility`,
       WebkitFontSmoothing: `antialiased`,
       MozOsxFontSmoothing: `grayscale`,
+      fontFamily: `"Inter", sans-serif`,
       color: `text`,
       backgroundColor: `background`,
       WebkitTextSizeAdjust: `100%`,
