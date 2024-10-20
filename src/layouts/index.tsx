@@ -1,8 +1,6 @@
 import * as React from "react";
 import { get } from "theme-ui";
-import { MDXProvider } from "@mdx-js/react";
 import { Global } from "@emotion/react";
-import MdxComponents from "../components/mdx-components";
 
 type LayoutProps = { children: React.ReactNode; className?: string };
 
@@ -28,9 +26,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
       })}
     />
-    <MDXProvider components={MdxComponents}>
-      <main className={className}>{children}</main>
-    </MDXProvider>
+    <main className={className}>{children}</main>
   </React.Fragment>
 );
 

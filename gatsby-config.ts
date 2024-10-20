@@ -1,16 +1,19 @@
 import type { GatsbyConfig } from "gatsby";
 
+const siteUrl = "https://alexanderhoerl.de";
+const defaultLanguage = "de";
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `alexanderhoerl.de`,
-    siteUrl: `https://alexanderhoerl.de`,
+    siteUrl,
     author: `Alexander Hörl`,
     siteTitle: `Alexander Hörl`,
     siteTitleAlt: `Alexander Hörl - Development & Design`,
     siteHeadline: `Alexander Hörl - Development & Design`,
     siteDescription: `Software Engineer from Germany with currently working for Weber Food Technology with experience in thermal imaging systems.`,
     siteImage: `/favicon.png`,
-    siteLanguage: `en`,
+    siteLanguage: defaultLanguage,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -94,6 +97,35 @@ const config: GatsbyConfig = {
             file: `https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap`,
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: ["en", "de"],
+        defaultLanguage,
+        fallbackLanguage: defaultLanguage,
+        generateDefaultLanguagePage: false,
+        siteUrl,
+        i18nextOptions: {
+          defaultNS: "translation",
+          debug: false,
+          lowerCaseLng: true,
+          saveMissing: false,
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
       },
     },
   ],

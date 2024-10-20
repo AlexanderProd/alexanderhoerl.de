@@ -13,7 +13,7 @@ import { graphql, StaticQuery } from "gatsby";
 
 interface MediaCardProps {
   imageName?: string;
-  imageUrl?: string;
+  imageUrl: string;
   videoUrl?: string;
   link?: string;
   children: React.ReactNode;
@@ -72,15 +72,11 @@ const MediaCard: React.FC<MediaCardProps> = ({
           minHeight: ["200px", "200px", "300px"],
         }}
       >
-        {/* <img src={imageUrl} alt={title} className="background-image" /> */}
-        <picture>
+        <img src={imageUrl} alt={title} className="background-image" />
+        {/* <picture>
           <source srcSet={`/${imageName}.avif`} type="image/avif" />
-          <img
-            src={`/${imageName}.jpg`}
-            alt={title}
-            className="background-image"
-          />
-        </picture>
+          <img src={imageUrl} alt={title} className="background-image" />
+        </picture> */}
         {/*  <StaticQuery
           query={graphql`
             query MediaCardQuery {

@@ -47,6 +47,10 @@ const theme = merge(tailwind, {
     },
   },
   breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
+  lineHeights: {
+    body: 1.5,
+    heading: 2,
+  },
   styles: {
     root: {
       margin: 0,

@@ -1,0 +1,22 @@
+{
+  "HERO.TITLE": "Hello, I'm Alexander Hörl",
+  "HERO.TEXT": "Software Engineer from Germany currently working for Weber Food Technology.",
+  "PROJECTS.TITLE": "Projects",
+  "PROJECTS.DESCRIPTION": "A selection of publically available projects I have worked on.",
+  "PROJECTS.LUCINSKI.TITLE": "Lucinski",
+  "PROJECTS.LUCINSKI.DESCRIPTION": "Homepage for a small company, featuring fast load times, a modern look and many individual animations.",
+  "PROJECTS.NIGHTTEC.TITLE": "Nighttec",
+  "PROJECTS.NIGHTTEC.DESCRIPTION": "Custom headless shopify store with high performance, serving thousands of customers daily.",
+  "PROJECTS.THERMAL_INLINE_SIMULATOR.TITLE": "Thermal Inline Simulator",
+  "PROJECTS.THERMAL_INLINE_SIMULATOR.DESCRIPTION": "Online simulator for combining different thermal inline devices with over 300 scopes to test the magnification of the thermal image behind the optic.",
+  "PROJECTS.CSQ_VIEWER.TITLE": "CSQ Viewer",
+  "PROJECTS.CSQ_VIEWER.DESCRIPTION": "Browser based software to inspect CSQ files recorded by FLIR thermal imaging cameras. Used regularly by companies around the world.",
+  "PROJECTS.LIGHTWEIGHT_SYSTEM.TITLE": "Lightweight System",
+  "PROJECTS.LIGHTWEIGHT_SYSTEM.DESCRIPTION": "Landing page for an engineering firm producing griping systems for the automotive industry, featuring an animated and 3D rendered model of the product.",
+  "CONTACT.TITLE": "Get in touch",
+  "CONTACT.MESSAGE": "Send me a <a href='mailto:{{mailLink}}'>Mail</a>, check out my <a href='{{githubLink}}'>GitHub</a> projects or connect with me on <a href='{{linkedinLink}}'>LinkedIn</a>.",
+  "CONTACT.SCHEDULE_CALL": "Schedule a call",
+  "FOOTER.LEGAL": "Legal Notice",
+  "FOOTER.COPYRIGHT": "Copyright © {{year}} All rights reserved.",
+  "HEADER.BACK": "Back"
+}
