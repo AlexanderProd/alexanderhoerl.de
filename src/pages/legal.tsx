@@ -21,10 +21,10 @@ const LegalPage: React.FC<PageProps> = () => {
       >
         <Link to="/">&larr; {t("HEADER.BACK")}</Link>
       </Box>
-      <Heading as="h1" variant="h1">
+      <Heading as="h1" variant="styles.legal.h1">
         {t("FOOTER.LEGAL")}
       </Heading>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="styles.legal.h2">
         Angaben gemäß § 5 TMG:
       </Heading>
       <Text>
@@ -34,7 +34,7 @@ const LegalPage: React.FC<PageProps> = () => {
         <br />
         90768 Fürth
       </Text>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="styles.legal.h2">
         Kontakt:
       </Heading>
       <Text>
@@ -44,10 +44,10 @@ const LegalPage: React.FC<PageProps> = () => {
         <br />
         Steuer-Nr.: 218 229 80683
       </Text>
-      <Heading as="h2" variant="h2">
+      <Heading as="h2" variant="styles.legal.h2">
         Haftungsausschluss:
       </Heading>
-      <Heading as="h3" variant="h3">
+      <Heading as="h3" variant="styles.legal.h3">
         Haftung für Inhalte
       </Heading>
       <Text>
@@ -55,7 +55,7 @@ const LegalPage: React.FC<PageProps> = () => {
         Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir
         jedoch keine Gewähr übernehmen.
       </Text>
-      <Heading as="h3" variant="h3">
+      <Heading as="h3" variant="styles.legal.h3">
         Haftung für Links
       </Heading>
       <Text>
@@ -63,7 +63,7 @@ const LegalPage: React.FC<PageProps> = () => {
         Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
         Inhalte auch keine Gewähr übernehmen.
       </Text>
-      <Heading as="h3" variant="h3">
+      <Heading as="h3" variant="styles.legal.h3">
         Urheberrecht
       </Heading>
       <Text>
@@ -74,7 +74,7 @@ const LegalPage: React.FC<PageProps> = () => {
         jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite
         sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
       </Text>
-      <Heading as="h3" variant="h3">
+      <Heading as="h3" variant="styles.legal.h3">
         Datenschutz
       </Heading>
       <Text>
@@ -83,7 +83,7 @@ const LegalPage: React.FC<PageProps> = () => {
         angeforderten Werbeinformationen wird hiermit ausdrücklich
         widersprochen.
       </Text>
-      <Heading as="h3" variant="h3">
+      <Heading as="h3" variant="styles.legal.h3">
         Google Analytics
       </Heading>
       <Text>

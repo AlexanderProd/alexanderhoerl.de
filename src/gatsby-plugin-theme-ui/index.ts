@@ -49,7 +49,6 @@ const theme = merge(tailwind, {
   breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
   lineHeights: {
     body: 1.5,
-    heading: 2,
   },
   styles: {
     root: {
@@ -78,6 +77,17 @@ const theme = merge(tailwind, {
       pre: {
         fontFamily: `monospace`,
         fontSize: `1em`,
+      },
+    },
+    legal: {
+      h1: {
+        my: 3,
+      },
+      h2: {
+        my: 2,
+      },
+      h3: {
+        my: 3,
       },
     },
     p: {
@@ -149,6 +159,7 @@ const theme = merge(tailwind, {
       color: `text`,
       border: `none`,
       backgroundColor: `transparent`,
+      fontFamily: `"Inter", sans-serif`,
     },
   },
   footer: {

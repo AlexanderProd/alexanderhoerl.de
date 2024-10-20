@@ -159,8 +159,8 @@ const MediaCard: React.FC<MediaCardProps> = ({
               sx={{
                 textTransform: `uppercase`,
                 letterSpacing: `wide`,
-                pt: 4,
-                fontSize: [18, 20, 22, 24, 26],
+                pt: 3,
+                fontSize: [18, 20, 22, 23, 24],
                 fontWeight: `medium`,
                 lineHeight: 1.125,
               }}

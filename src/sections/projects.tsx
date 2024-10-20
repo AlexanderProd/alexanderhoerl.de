@@ -52,7 +52,7 @@ const data: Project[] = [
   {
     key: "ROGGENHOFER_CONSULT",
     imageName: "roggenhofer-consult",
-    link: "https://roggenhofer-consult.de",
+    link: "https://roggenhoferconsult.de",
     type: "WEBSITES",
   },
   {
@@ -120,6 +120,7 @@ const Projects: React.FC<ProjectProps> = ({ assets }) => {
       <Box
         color="background"
         sx={{
+          mt: `-1px`,
           height: ["100px", "150px", "200px"],
           clipPath: `polygon(0 0%, 100% 0%, 100% 50%, 0 25%)`,
           background: `linear-gradient(to right, #18171c 0%, #2b2b2b 100%)`,
