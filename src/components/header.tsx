@@ -24,16 +24,14 @@ const Header: React.FC<{ showBack?: boolean }> = ({ showBack }) => {
         >
           {/* @ts-ignore */}
           {showBack ? <Link to="/">&larr; {t("HEADER.BACK")}</Link> : <Box />}
-          <Box>
-            {languages
-              .filter((lng) => lng !== language)
-              .map((lng) => (
-                // @ts-ignore
-                <Link to={originalPath} language={lng} key={lng}>
-                  {lng === "de" && <GermanyFlag height={16} />}
-                  {lng === "en" && <USAFlag height={16} />}
-                </Link>
-              ))}
+          <Box sx={{ display: `flex`, gap: 2 }}>
+            {languages.map((lng) => (
+              // @ts-ignore
+              <Link to={originalPath} language={lng} key={lng}>
+                {lng === "de" && <GermanyFlag height={16} />}
+                {lng === "en" && <USAFlag height={16} />}
+              </Link>
+            ))}
           </Box>
         </Flex>
       </Container>

@@ -35,3 +35,44 @@ export const GermanyFlag = (
     </svg>
   );
 };
+
+export const ChevronDown = (
+  props: React.SVGProps<SVGSVGElement>,
+  { height = 24 }: { height?: number }
+) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={height}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+};
+export const ChevronUp = (
+  props: React.SVGProps<SVGSVGElement>,
+  { height = 24 }: { height?: number }
+) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={height}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  );
+};

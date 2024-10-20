@@ -8,6 +8,7 @@ import Contact from "../sections/contact";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Seo from "../components/seo";
+import Services from "../sections/services";
 
 const IndexPage: React.FC<PageProps<Queries.IndexQuery>> = ({ data }) => {
   return (
@@ -15,6 +16,7 @@ const IndexPage: React.FC<PageProps<Queries.IndexQuery>> = ({ data }) => {
       <Header />
       <Hero />
       <Projects assets={data.assets.nodes} />
+      <Services />
       <About />
       <Contact />
       <Footer />

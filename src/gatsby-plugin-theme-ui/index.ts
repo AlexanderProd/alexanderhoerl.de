@@ -145,6 +145,11 @@ const theme = merge(tailwind, {
       py: 2,
       ml: 3,
     },
+    ghost: {
+      color: `text`,
+      border: `none`,
+      backgroundColor: `transparent`,
+    },
   },
   footer: {
     textAlign: `center`,

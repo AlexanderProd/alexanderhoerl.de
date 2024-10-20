@@ -147,7 +147,7 @@ const MediaCard: React.FC<MediaCardProps> = ({
                 cursor: link ? "pointer" : "default",
               },
               p: {
-                fontSize: [14, 16],
+                fontSize: [12, 14],
                 color: `white`,
                 margin: 0,
                 lineHeight: 1.25,
@@ -160,7 +160,7 @@ const MediaCard: React.FC<MediaCardProps> = ({
                 textTransform: `uppercase`,
                 letterSpacing: `wide`,
                 pt: 4,
-                fontSize: [20, 22, 24, 26, 30],
+                fontSize: [18, 20, 22, 24, 26],
                 fontWeight: `medium`,
                 lineHeight: 1.125,
               }}
