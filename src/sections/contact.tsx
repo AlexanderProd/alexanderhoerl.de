@@ -10,7 +10,15 @@ const Contact = () => {
       <Heading as="h2" variant="styles.h2">
         {t("CONTACT.TITLE")}
       </Heading>
-      <p dangerouslySetInnerHTML={{ __html: t("CONTACT.MESSAGE") }} />
+      <p
+        dangerouslySetInnerHTML={{
+          __html: t("CONTACT.MESSAGE", {
+            mailLink: `mail@alexanderhoerl.de`,
+            githubLink: `https://github.com/AlexanderProd`,
+            linkedinLink: `https://www.linkedin.com/in/alexander-h%C3%B6rl-b6171b112/`,
+          }),
+        }}
+      />
       <Button>
         <Link
           href="https://calendly.com/productionsalexander/gettoknow"
